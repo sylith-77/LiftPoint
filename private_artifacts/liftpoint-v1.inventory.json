@@ -1,0 +1,137 @@
+{
+  "status": "prepared_for_authorized_public_deployment",
+  "bundle_sha256": "0667d1c8025c745f66713171faf121e3b905c4f69a9febe119ff6d1de02ffc62",
+  "bundle_bytes": 8093025,
+  "member_count": 17,
+  "customer_count": 40008,
+  "selected_count": 12002,
+  "feature_count": 91,
+  "source_projection_array_equality": true,
+  "outcomes_assignment_raw_rows_exported": false,
+  "files": {
+    "inputs/customers.npz": {
+      "sha256": "b8351b9f1ad11430456d86ccb90abf42c29855c48c89e7f45c91c24e39175955",
+      "bytes": 6104358,
+      "purpose": "same 40008 internal IDs/order and fixed static91 input; target/treatment excluded",
+      "source_sha256": "134c4e98b92906212466585a6f8d81588dd587da890ea98c2f13c5f843aba909",
+      "method": "lossless field projection; no transform/refit",
+      "columns": [
+        "client_id",
+        "static"
+      ]
+    },
+    "predictions/final_predictions.npz": {
+      "sha256": "b203c7bcb6de97b05ab6716ad97e7512d6cfa6558fe3dbd247730a00a987d9f0",
+      "bytes": 1158225,
+      "purpose": "saved final p0/p1 probabilities; no outcomes or assignment",
+      "source_sha256": "3439a6caba4d155c02641699cb0157f300a6d758891ddda128a8aa25d570cdf3",
+      "method": "lossless field projection; no transform/refit",
+      "columns": [
+        "client_id",
+        "dl_p0",
+        "dl_p1",
+        "ml_p0",
+        "ml_p1"
+      ]
+    },
+    "summaries/summaries.npz": {
+      "sha256": "16ec626376a1d14133e41eb0ad76e0b4233cdc201170973e69c596bfac798087",
+      "bytes": 722433,
+      "purpose": "five original-unit display summaries for all fixed customers",
+      "source_sha256": "16ec626376a1d14133e41eb0ad76e0b4233cdc201170973e69c596bfac798087",
+      "method": "unchanged bytes"
+    },
+    "evidence/freeze_manifest.json": {
+      "sha256": "7a1c42fb57861db97829ae088e375268d852bfc5e69a51bee5df66bd814b897f",
+      "bytes": 23731,
+      "purpose": "immutable experiment freeze and model hashes",
+      "source_sha256": "7a1c42fb57861db97829ae088e375268d852bfc5e69a51bee5df66bd814b897f",
+      "method": "unchanged bytes"
+    },
+    "evidence/preprocessing_manifest.json": {
+      "sha256": "1f7ad324854779604fbeffa3c47bc0012183d9f25b9a1f33e723124c071aad8d",
+      "bytes": 10277,
+      "purpose": "unchanged final training preprocessing state and feature order",
+      "source_sha256": "1f7ad324854779604fbeffa3c47bc0012183d9f25b9a1f33e723124c071aad8d",
+      "method": "unchanged bytes"
+    },
+    "evidence/test_input_manifest.json": {
+      "sha256": "e8a6657f2f854508f772743ec6b9295db8e10c5b1b8ff3d99431206261e44c6b",
+      "bytes": 13319,
+      "purpose": "fixed cohort/input provenance",
+      "source_sha256": "e8a6657f2f854508f772743ec6b9295db8e10c5b1b8ff3d99431206261e44c6b",
+      "method": "unchanged bytes"
+    },
+    "evidence/results.json": {
+      "sha256": "b3eea108447b4a572de53f66fbac059a10752ff4a6b89b16a35eb199e08c24db",
+      "bytes": 4040,
+      "purpose": "existing fixed aggregate and source prediction hash",
+      "source_sha256": "b3eea108447b4a572de53f66fbac059a10752ff4a6b89b16a35eb199e08c24db",
+      "method": "unchanged bytes"
+    },
+    "evidence/summary_manifest.json": {
+      "sha256": "1d16ce252f6eb58c1935b2e7cb10ad6dec962de55504f0017fdffe81921b0166",
+      "bytes": 2811,
+      "purpose": "original-unit summary extraction audit",
+      "source_sha256": "1d16ce252f6eb58c1935b2e7cb10ad6dec962de55504f0017fdffe81921b0166",
+      "method": "unchanged bytes"
+    },
+    "models/dl.keras": {
+      "sha256": "3d9fe08170410fa6588962738a351c0cc472e71d61880d53a67e391ea8f8d22e",
+      "bytes": 155042,
+      "purpose": "frozen MLP baseline seed42 checkpoint",
+      "source_sha256": "3d9fe08170410fa6588962738a351c0cc472e71d61880d53a67e391ea8f8d22e",
+      "method": "unchanged bytes"
+    },
+    "models/model_p0.joblib": {
+      "sha256": "b28a9223b689018fdfec46687f52d28481c5ef7b5c2ff741aa7d40e1bffaf4fb",
+      "bytes": 1599,
+      "purpose": "frozen LR C0.1 p0",
+      "source_sha256": "b28a9223b689018fdfec46687f52d28481c5ef7b5c2ff741aa7d40e1bffaf4fb",
+      "method": "unchanged bytes"
+    },
+    "models/model_p1.joblib": {
+      "sha256": "08bf949f78109b5a1672497e5429c5039e2daa2fed26b3a9f7f868711cd1061a",
+      "bytes": 1599,
+      "purpose": "frozen LR C0.1 p1",
+      "source_sha256": "08bf949f78109b5a1672497e5429c5039e2daa2fed26b3a9f7f868711cd1061a",
+      "method": "unchanged bytes"
+    },
+    "aggregates/test_scorecard.csv": {
+      "sha256": "dc8f618df198022bb7e3011f331f465f52e2a154d2b88bd2442435993ff07e68",
+      "bytes": 654,
+      "purpose": "existing final aggregate only; never recomputed",
+      "source_sha256": "dc8f618df198022bb7e3011f331f465f52e2a154d2b88bd2442435993ff07e68",
+      "method": "unchanged bytes"
+    },
+    "aggregates/bootstrap_results.json": {
+      "sha256": "10636ae4c41fac1ba190668d7bcedef4245183cfb240104bdc3b0357088a18e6",
+      "bytes": 2219,
+      "purpose": "existing final aggregate only; never recomputed",
+      "source_sha256": "10636ae4c41fac1ba190668d7bcedef4245183cfb240104bdc3b0357088a18e6",
+      "method": "unchanged bytes"
+    },
+    "aggregates/bootstrap_intervals.csv": {
+      "sha256": "853cb4eaabc083896959ee7eb6e72662153615da89de3d1b6b36979c507cc4a4",
+      "bytes": 423,
+      "purpose": "existing final aggregate only; never recomputed",
+      "source_sha256": "853cb4eaabc083896959ee7eb6e72662153615da89de3d1b6b36979c507cc4a4",
+      "method": "unchanged bytes"
+    },
+    "support/model_objects.py": {
+      "sha256": "4bfbda32559bb0b2287fe67810e3735d965305e73dfeb32e65230051d44a5001",
+      "bytes": 2056,
+      "purpose": "original frozen inference loader/predictor source",
+      "source_sha256": "4bfbda32559bb0b2287fe67810e3735d965305e73dfeb32e65230051d44a5001",
+      "method": "unchanged bytes"
+    },
+    "support/runtime.py": {
+      "sha256": "a1a544f9501bbe7b76aa5f705f54d2be7e7f68d14953861c02557bb354a49335",
+      "bytes": 5458,
+      "purpose": "original frozen inference loader/predictor source",
+      "source_sha256": "a1a544f9501bbe7b76aa5f705f54d2be7e7f68d14953861c02557bb354a49335",
+      "method": "unchanged bytes"
+    }
+  },
+  "intended_storage": "https://github.com/sylith-77/LiftPoint/blob/main/private_artifacts/liftpoint-v1.zip and Streamlit Community Cloud checkout"
+}
