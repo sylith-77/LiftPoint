@@ -1,6 +1,6 @@
 """Portable, read-only LiftPoint evidence resolver. No model-library imports.
 
-The protected ZIP belongs in an already-private deployment repository. Its
+The minimal ZIP is published in the dedicated deployment repository. Its
 expected content SHA is configured independently. No customer outcome or
 assignment arrays are accepted by this deployment bundle.
 """
@@ -83,7 +83,7 @@ class Config:
     def payload(self):
         # Displayable metadata deliberately excludes host/user filesystem paths.
         return {'bundle_sha256': self.bundle_sha256, 'code_commit': self.code_commit,
-                'layout': 'protected portable bundle v1', 'record_storage': 'server-local per bundle'}
+                'layout': 'content-verified portable bundle v1', 'record_storage': 'server-local or matching Secrets record'}
 
 
 def _secret_settings():
